@@ -4,6 +4,11 @@ import Model.Word;
 
 import java.util.*;
 
+/**
+ * @author Tuyên
+ * MyTimerTask : list Word from "text(InputTxt)" to "mysql"
+ * list Word
+ */
 public class MyTimerTask extends TimerTask {
 
     @Override

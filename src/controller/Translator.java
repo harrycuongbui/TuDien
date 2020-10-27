@@ -5,6 +5,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * @author Tuyên
+ * Translator API translate From "http://api.whatsmate.net/v1/translation/translate";
+ * translateText(String fromLang, String toLang, String text) Trả về String
+ *
+ */
 public class Translator {
     // TODO: If you have your own Premium account credentials, put them down here:
     private static final String CLIENT_ID = "FREE_TRIAL_ACCOUNT";

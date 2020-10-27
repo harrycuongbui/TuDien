@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InsertControl">
+    <children>
+        <AnchorPane layoutX="11.0" layoutY="51.0" prefHeight="341.0" prefWidth="579.0" style="-fx-background-color: #8A2BE2;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="51.0">
+         <children>
+            <TextArea layoutX="36.0" layoutY="64.0" prefHeight="182.0" prefWidth="472.0" promptText=" Word Explain" />
+            <AnchorPane layoutX="-8.0" layoutY="247.0" prefHeight="35.0" prefWidth="579.0" />
+              <AnchorPane layoutX="-188.0" layoutY="41.0" prefHeight="35.0" prefWidth="203.0" style="-fx-background-color: #8A2BE2;" AnchorPane.bottomAnchor="324.0" AnchorPane.leftAnchor="-188.0" AnchorPane.topAnchor="41.0" />
+            <TextField layoutX="36.0" layoutY="14.0" prefHeight="25.0" prefWidth="269.0" promptText="Word Target" />
+            <Button layoutX="36.0" layoutY="264.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="94.0" text="Insert" />
+         </children></AnchorPane>
+        <MenuBar fx:id="MenuBar" layoutX="14.0" layoutY="14.0">
+            <menus>
+                <Menu fx:id="searchWord" mnemonicParsing="false" text="Search Word">
+
+                </Menu>
+                <Menu fx:id="transulate" mnemonicParsing="false" text="Translate">
+
+                </Menu>
+
+                <Menu fx:id="insertWord" mnemonicParsing="false" text="Insert Word">
+
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>

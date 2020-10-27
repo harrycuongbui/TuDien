@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TranslateControl">
+    <children>
+        <AnchorPane layoutX="7.0" layoutY="110.0" prefHeight="288.0" prefWidth="283.0" style="-fx-background-color: #8A2BE2;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="110.0" />
+        <AnchorPane layoutX="300.0" layoutY="111.0" prefHeight="288.0" prefWidth="291.0" style="-fx-background-color: #8A2BE2;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="111.0" />
+        <MenuBar fx:id="MenuBar" layoutX="14.0" layoutY="14.0">
+            <menus>
+                <Menu fx:id="searchWord" mnemonicParsing="false" text="Search Word">
+
+                </Menu>
+                <Menu fx:id="translate" mnemonicParsing="false" text="Translate">
+
+                </Menu>
+
+                <Menu fx:id="insertWord" mnemonicParsing="false" text="Insert Word">
+
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane layoutX="6.0" layoutY="47.0" prefHeight="53.0" prefWidth="587.0">
+            <children>
+                <ComboBox fx:id="cbxToLang" layoutX="329.0" layoutY="14.0" prefHeight="25.0" prefWidth="102.0" promptText="Viet Nam" />
+                <ComboBox fx:id="cbxFromLang" layoutX="153.0" layoutY="14.0" prefHeight="25.0" prefWidth="92.0" promptText="English" />
+            <Button fx:id="btnTranslate" layoutX="257.0" layoutY="14.0" mnemonicParsing="false" text="Translate" />
+            </children>
+        </AnchorPane>
+      <TextArea layoutX="-133.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" />
+    </children>
+</AnchorPane>

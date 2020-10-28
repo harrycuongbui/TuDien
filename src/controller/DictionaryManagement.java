@@ -18,10 +18,26 @@ public class DictionaryManagement  {
     }
 
     public void showAllWords(List<Word> list) {
-
+        int size = list.size();
+        for (Word word : list) {
+            System.out.println("i :" + word.toString());
+        }
     }
     private  int dictionarySearcherWordIndex(Word searchW, List<Word> list){
-        return 0;
+        list.sort(new Comparator<Word>() {
+            @Override
+            public int compare(Word o1, Word o2) {
+                return o1.getWordTarget().compareTo(o2.getWordTarget());
+            }
+        });
+        int i = Collections.binarySearch(list, searchW);
+        if( i >= 0) {
+//            System.out.println("Vi tri thu " + i);
+            return i;
+        } else{
+            System.out.println("Khong tim thay tu trong file");
+            return -1;
+        }
     }
     public String dictionarySearcher(Word searchW, List<Word> list) {
         int i = this.dictionarySearcherWordIndex( searchW, list);
@@ -31,14 +47,35 @@ public class DictionaryManagement  {
             return "";
         }
     }
-    public void dictionaryInsert(Word word, List<Word> list)  {
-
+    public boolean dictionaryInsert(Word word, List<Word> list)  {
+        int i = this.dictionarySearcherWordIndex(word, list);
+        if(i >= 0){
+            System.out.println("Đã tồn tại! Insert lỗi!");
+            return false;
+        } else{
+            list.add(word);
+            dicMD.dictionaryInsert(word, "ok");
+            System.out.println("Insert Word ok!");
+            return true;
+        }
     }
     public  void dictionaryUpdate(Word wordUpdate, List<Word> list) {
-
+        int i = this.dictionarySearcherWordIndex( wordUpdate, list);
+        if( i>= 0) {
+            list.get(i).setWordExplain(wordUpdate.getWordExplain());
+            dicMD.dictionaryUpdate(wordUpdate, "ok");
+        } else{
+            System.out.println("Từ vựng không tồn tại, Update lỗi!");
+        }
     }
     public void dictionaryDelete(Word wordDelete, List<Word> list) {
-
+        int i = this.dictionarySearcherWordIndex( wordDelete, list);
+        if(i >= 0) {
+            list.remove(i);
+            dicMD.dictionaryDelete(wordDelete, "ok");
+        } else{
+            System.out.println("Từ vựng không tồn tại, Delete lỗi!");
+        }
     }
 
 }
